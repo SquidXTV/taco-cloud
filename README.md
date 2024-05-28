@@ -4,7 +4,7 @@ This is my walkthrough of the [Spring in Action, Sixth Edition](https://www.mann
 ## Part 1: Foundational Spring
 - [x] Getting started with Spring
 - [x] Developing web applications
-- [ ] Working with data
+- [x] Working with data
 - [ ] Working with non-relational data
 - [ ] Securing Spring
 - [ ] Working with configuration properties

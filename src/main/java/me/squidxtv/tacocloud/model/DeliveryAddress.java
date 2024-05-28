@@ -1,9 +1,11 @@
 package me.squidxtv.tacocloud.model;
 
+import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
+@Embeddable
 public class DeliveryAddress {
 
     @NotBlank(message = "Delivery name is required")

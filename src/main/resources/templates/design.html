@@ -19,7 +19,6 @@
 </div>
 <form class="form" method="POST" th:object="${taco}">
     <div class="grid">
-        <!--/*@thymesVar id="ingredient" type="me.squidxtv.tacocloud.model.Ingredient"*/-->
         <div class="ingredient-group" id="wraps">
             <h3 class="pick">Designate your wrap:</h3>
             <div th:each="ingredient : ${wrap}">
