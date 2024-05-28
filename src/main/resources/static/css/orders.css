@@ -1,0 +1,54 @@
+.current-tacos {
+    text-align: center;
+}
+
+.tacos {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.taco {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.ingredients {
+    display: flex;
+}
+
+.ingredient {
+    padding: 3px 6px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #e3e3e3;
+    border-radius: 3px;
+}
+
+.add-taco {
+    font-size: 42px;
+    text-align: center;
+}
+
+.deliver {
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.payment {
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.data {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
