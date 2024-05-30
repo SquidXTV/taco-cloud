@@ -18,3 +18,14 @@
 .validation-error {
     color: red;
 }
+
+form {
+    flex-direction: column;
+}
+
+.data-grid {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    margin-bottom: 30px;
+}

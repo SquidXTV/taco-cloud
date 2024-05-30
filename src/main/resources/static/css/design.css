@@ -1,31 +1,13 @@
-div.ingredient-group {
-    margin: 20px;
-}
-
-div.grid {
+.ingredients {
     display: flex;
-    justify-content: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    gap: 40px;
     border: 2px solid black;
 }
 
-.pick {
-    margin-top: 0;
-}
-
-.grid:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.naming {
-    margin-top: 2.5%;
-    justify-content: center;
-    text-align: center;
-}
-
-.text-input {
+.ingredient-type {
     margin: 20px;
+}
+
+form {
+    gap: 20px;
 }

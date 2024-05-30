@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -16,31 +17,36 @@ import org.springframework.web.bind.support.SessionStatus;
 @Slf4j
 @Controller
 @RequestMapping("/orders")
-@SessionAttributes("tacoOrder")
+@SessionAttributes("order")
 public class OrderController {
 
-    private OrderRepository orderRepository;
+    private final OrderRepository orders;
 
     @Autowired
-    public OrderController(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
+    public OrderController(OrderRepository orders) {
+        this.orders = orders;
     }
 
-    @GetMapping("/current")
-    public String orders() {
+    @ModelAttribute("order")
+    public TacoOrder order() {
+        return new TacoOrder();
+    }
+
+    @GetMapping
+    public String view() {
         return "orders";
     }
 
     @PostMapping
-    public String processOrder(@Valid TacoOrder order, Errors errors, SessionStatus session) {
+    public String processOrder(@ModelAttribute("order") @Valid TacoOrder order, Errors errors, SessionStatus session) {
         if (errors.hasErrors()) {
             return "orders";
         }
 
-        orderRepository.save(order);
+        orders.save(order);
         log.info("Order submitted: {}", order);
         session.setComplete();
-        
+
         return "redirect:/";
     }
 

@@ -1,0 +1,10 @@
+package me.squidxtv.tacocloud.data;
+
+import me.squidxtv.tacocloud.model.User;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Long> {
+
+    User findByUsername(String username);
+
+}

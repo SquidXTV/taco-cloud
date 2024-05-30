@@ -8,15 +8,22 @@ import lombok.Data;
 @Embeddable
 public class DeliveryAddress {
 
-    @NotBlank(message = "Delivery name is required")
-    private String name;
-    @NotBlank(message = "Street is required")
+    @NotBlank(message = "First name is required.")
+    private String firstName;
+
+    @NotBlank(message = "Last name is required.")
+    private String lastName;
+
+    @NotBlank(message = "Street is required.")
     private String street;
-    @NotBlank(message = "City is required")
+
+    @NotBlank(message = "City is required.")
     private String city;
-    @NotBlank(message = "State is required")
+
+    @NotBlank(message = "State is required.")
     private String state;
-    @NotBlank(message = "Zip code is required")
+
+    @NotBlank(message = "Zip code is required.")
     private String zip;
 
 }

@@ -5,8 +5,8 @@ This is my walkthrough of the [Spring in Action, Sixth Edition](https://www.mann
 - [x] Getting started with Spring
 - [x] Developing web applications
 - [x] Working with data
-- [ ] Working with non-relational data
-- [ ] Securing Spring
+- [ ] Working with non-relational data (skipped)
+- [x] Securing Spring
 - [ ] Working with configuration properties
 
 ## Part 2: Integrated Spring
