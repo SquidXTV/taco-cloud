@@ -2,7 +2,7 @@ package me.squidxtv.tacocloud.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import me.squidxtv.tacocloud.data.UserRepository;
+import me.squidxtv.tacocloud.repositories.UserRepository;
 import me.squidxtv.tacocloud.model.RegistrationForm;
 import me.squidxtv.tacocloud.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/register")
 public class RegistrationController {
 
-    private final UserRepository userRepository;
+    private final UserRepository users;
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public RegistrationController(UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
+    public RegistrationController(UserRepository users, PasswordEncoder passwordEncoder) {
+        this.users = users;
         this.passwordEncoder = passwordEncoder;
     }
 
@@ -44,7 +44,7 @@ public class RegistrationController {
             return "registration";
         }
 
-        User save = userRepository.save(registrationForm.toUser(passwordEncoder));
+        User save = users.save(registrationForm.toUser(passwordEncoder));
         log.info(save.toString());
 
         return "redirect:/login";

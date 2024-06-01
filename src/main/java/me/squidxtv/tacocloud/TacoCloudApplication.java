@@ -1,6 +1,6 @@
 package me.squidxtv.tacocloud;
 
-import me.squidxtv.tacocloud.data.IngredientRepository;
+import me.squidxtv.tacocloud.repositories.IngredientRepository;
 import me.squidxtv.tacocloud.model.Ingredient;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

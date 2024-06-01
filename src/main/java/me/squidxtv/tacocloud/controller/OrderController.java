@@ -2,8 +2,8 @@ package me.squidxtv.tacocloud.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import me.squidxtv.tacocloud.data.OrderRepository;
 import me.squidxtv.tacocloud.model.TacoOrder;
+import me.squidxtv.tacocloud.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
+
+import java.time.Instant;
 
 @Slf4j
 @Controller
@@ -43,6 +45,7 @@ public class OrderController {
             return "orders";
         }
 
+        order.setPlacedAt(Instant.now());
         orders.save(order);
         log.info("Order submitted: {}", order);
         session.setComplete();

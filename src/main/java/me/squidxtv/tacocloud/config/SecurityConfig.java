@@ -1,6 +1,6 @@
 package me.squidxtv.tacocloud.config;
 
-import me.squidxtv.tacocloud.data.UserRepository;
+import me.squidxtv.tacocloud.repositories.UserRepository;
 import me.squidxtv.tacocloud.model.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -74,7 +74,7 @@
         <span class="validation-error" style="grid-area: 3 / 3" th:if="${#fields.hasErrors('creditCard.cvv')}" th:errors="*{creditCard.cvv}"></span>
     </div>
 
-    <span th:if="${#fields.hasErrors('tacos')}" th:errors="*{tacos}"></span>
+    <span class="validation-error" th:if="${#fields.hasErrors('tacos')}" th:errors="*{tacos}"></span>
     <button style="margin-bottom: 30px">Submit Order</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -2,7 +2,7 @@ package me.squidxtv.tacocloud.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import me.squidxtv.tacocloud.data.IngredientRepository;
+import me.squidxtv.tacocloud.repositories.IngredientRepository;
 import me.squidxtv.tacocloud.model.Ingredient;
 import me.squidxtv.tacocloud.model.Ingredient.Type;
 import me.squidxtv.tacocloud.model.Taco;
@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.time.Instant;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -67,6 +68,7 @@ public class DesignTacoController {
             return "design";
         }
 
+        taco.setCreatedAt(Instant.now());
         order.addTaco(taco);
         log.info("Processing taco: {}", taco);
 

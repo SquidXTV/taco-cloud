@@ -1,4 +1,4 @@
-package me.squidxtv.tacocloud.data;
+package me.squidxtv.tacocloud.repositories;
 
 import me.squidxtv.tacocloud.model.TacoOrder;
 import org.springframework.data.repository.CrudRepository;
