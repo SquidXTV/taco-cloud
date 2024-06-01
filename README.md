@@ -7,7 +7,7 @@ This is my walkthrough of the [Spring in Action, Sixth Edition](https://www.mann
 - [x] Working with data
 - [ ] Working with non-relational data (skipped)
 - [x] Securing Spring
-- [ ] Working with configuration properties
+- [x] Working with configuration properties
 
 ## Part 2: Integrated Spring
 - [ ] Creating REST services
