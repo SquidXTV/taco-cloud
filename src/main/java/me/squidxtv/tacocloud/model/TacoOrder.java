@@ -11,13 +11,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Size;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
+@RestResource(rel = "orders", path = "orders")
 public class TacoOrder {
 
     @Id
@@ -46,7 +47,7 @@ public class TacoOrder {
 
     @Size(min = 1, message = "Order must contain at least a single taco.")
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Taco> tacos = new ArrayList<>();
+    private List<Taco> tacos;
 
     public void addTaco(Taco taco) {
         tacos.add(taco);

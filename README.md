@@ -10,7 +10,7 @@ This is my walkthrough of the [Spring in Action, Sixth Edition](https://www.mann
 - [x] Working with configuration properties
 
 ## Part 2: Integrated Spring
-- [ ] Creating REST services
+- [X] Creating REST services
 - [ ] Securing REST
 - [ ] Sending messages asynchronously
 - [ ] Integrating Spring

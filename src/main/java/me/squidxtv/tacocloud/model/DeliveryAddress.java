@@ -119,4 +119,34 @@ public class DeliveryAddress implements Serializable {
                 '}';
     }
 
+    public void patch(DeliveryAddress other) {
+        if (other == null) {
+            return;
+        }
+
+        if (other.firstName != null) {
+            this.firstName = other.firstName;
+        }
+
+        if (other.lastName != null) {
+            this.lastName = other.lastName;
+        }
+
+        if (other.street != null) {
+            this.street = other.street;
+        }
+
+        if (other.city != null) {
+            this.city = other.city;
+        }
+
+        if (other.state != null) {
+            this.state = other.state;
+        }
+
+        if (other.zip != null) {
+            this.zip = other.zip;
+        }
+    }
+
 }
