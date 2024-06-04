@@ -77,22 +77,4 @@ public class CreditCard {
                 '}';
     }
 
-    public void patch(CreditCard other) {
-        if (other == null) {
-            return;
-        }
-
-        if (other.getNumber() != null) {
-            this.number = other.getNumber();
-        }
-
-        if (other.getExpiration() != null) {
-            this.expiration = other.getExpiration();
-        }
-
-        if (other.getCvv() != null) {
-            this.cvv = other.getCvv();
-        }
-    }
-
 }
